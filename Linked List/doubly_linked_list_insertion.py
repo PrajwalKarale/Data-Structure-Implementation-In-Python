@@ -61,8 +61,9 @@ class DoublyLinkedList:
             ptr = ptr.next
         newnode.next = ptr
         newnode.prev = ptr.prev
-        ptr.prev = newnode
         ptr.prev.next = newnode
+        ptr.prev = newnode
+        print(f'Node with value {data} inserted successfully before node {num}')
     
     #function to print the list
     def  printlist(self):
